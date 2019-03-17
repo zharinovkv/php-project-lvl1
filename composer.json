@@ -1,0 +1,5 @@
+{
+    "name": "zharinov/brain-games",
+    "require": {},
+    "bin": ["bin/brain-games"]
+}
