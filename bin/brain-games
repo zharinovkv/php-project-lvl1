@@ -2,4 +2,11 @@
 
 <?php
 
-echo "Welcome to the Brain Games!\n";
+$autoloadPathToCli = __DIR__ . '/../src/cli.php';
+if (file_exists($autoloadPathToCli)) {
+    require_once $autoloadPathToCli;
+}
+
+use function BrainGames\Cli\run;
+
+run();
