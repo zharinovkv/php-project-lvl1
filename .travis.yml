@@ -1,2 +1,12 @@
 language: php
+php:
+  - '7.2'
+
+install:
+  - composer self-update
+  - make install
+
 script: make lint composer run-script phpcs -- --standard=PSR12 src bin
+
+after_script:
+  - vendor/bin/test-reporter
