@@ -1,6 +1,9 @@
 {
     "name": "zharinov/brain-games",
-    "bin": ["bin/brain-games"],
+    "bin":
+    [   "bin/brain-games",
+        "bin/brain-even"
+    ],
     "type": "library",
     "authors": [
         {

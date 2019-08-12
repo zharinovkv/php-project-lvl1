@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+
+<?php
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+$pathToCli = __DIR__ . '/../src/cli.php';
+if (file_exists($pathToCli)) {
+    require_once $pathToCli;
+}
+
+$pathToEven = __DIR__ . '/../src/even.php';
+if (file_exists($pathToEven)) {
+    require_once $pathToEven;
+}
+
+use function BrainGames\Even\even;
+
+even();
+
