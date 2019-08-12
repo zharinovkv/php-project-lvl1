@@ -2,7 +2,8 @@ Installation
 
 composer global require zharinov/brain-games @dev
 
-[![asciicast](https://asciinema.org/a/tmppzlz3wg2-ascii.png)](https://asciinema.org/a/tmppzlz3wg2-ascii)
+[![asciicast](https://asciinema.org/a/Y5R6RpErrGN1rsqfNylN9Q3Z4.svg)](https://asciinema.org/a/Y5R6RpErrGN1rsqfNylN9Q3Z4)
+
 
 [![asciicast](https://asciinema.org/a/VjTueuhbaNRO6WcDVVOcAROCL.svg)](https://asciinema.org/a/VjTueuhbaNRO6WcDVVOcAROCL)
 
