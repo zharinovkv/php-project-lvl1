@@ -6,7 +6,7 @@ install:
   - composer self-update
   - make install
 
-script: phpcs
+script: make lint 
 
 after_script:
   - vendor/bin/test-reporter
