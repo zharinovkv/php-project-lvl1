@@ -11,7 +11,7 @@
           "email": "zharinovkv@gmail.com"
         }
       ],
-    "description": "hexlet php-package",
+    "description": "php-project-lvl1",
     "license": "MIT",
     "minimum-stability": "dev",
     "scripts": {
