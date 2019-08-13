@@ -14,9 +14,9 @@ function calc()
     line("Hello, %s!", $name);
 
     while ($counter < 4) {
-        $rand1 = rand(1,10);
-        $rand2 = rand(1,10);
-        $znac = rand(1,3);
+        $rand1 = rand(1, 10);
+        $rand2 = rand(1, 10);
+        $znac = rand(1, 3);
         $answer = 0;
         $result = 0;
 
@@ -43,7 +43,8 @@ function calc()
         } else {
             line("Question: %s * %s", $rand1, $rand2);
             line("Your answer: %s", $answer);
-            line("%s is wrong answer ;(. Correct answer was: %s." . "\n" . "Let's try again,  %s!", $answer, $result, $name);
+            line("%s is wrong answer ;(. Correct answer was: %s.", $answer, $result);
+            line("Let's try again,  %s!", $name);
         }
     }
     line("Congratulations, %s!" . "\n", $name);
