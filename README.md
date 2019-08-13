@@ -1,11 +1,16 @@
 Installation
 
-composer global require zharinov/brain-games @dev
+composer global require --dev zharinov/brain-games @dev
+
+[![asciicast](https://asciinema.org/a/R00VLVBIrYTlMubG3zlzPJJBw.svg)](https://asciinema.org/a/R00VLVBIrYTlMubG3zlzPJJBw)
 
 [![asciicast](https://asciinema.org/a/FwwcE9iSXgC0kzrpdpuzA62Ir.svg)](https://asciinema.org/a/FwwcE9iSXgC0kzrpdpuzA62Ir)
 
-
 [![asciicast](https://asciinema.org/a/VjTueuhbaNRO6WcDVVOcAROCL.svg)](https://asciinema.org/a/VjTueuhbaNRO6WcDVVOcAROCL)
+
+
+
+
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
