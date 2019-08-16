@@ -3,7 +3,10 @@
     "bin":
     [   "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "type": "library",
     "authors": [
@@ -23,5 +26,16 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.4"
+    },
+    "autoload": {
+        "files": [
+            "src/cli.php",
+            "src/games.php",
+            "src/games/calc.php",
+            "src/games/even.php",
+            "src/games/gcd.php",
+            "src/games/progression.php",
+            "src/games/prime.php"
+        ]
     }
 }

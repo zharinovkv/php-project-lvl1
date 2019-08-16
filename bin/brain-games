@@ -10,11 +10,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-$pathToCli = __DIR__ . '/../src/cli.php';
-if (file_exists($pathToCli)) {
-    require_once $pathToCli;
-}
-
 use function BrainGames\Cli\run;
 
 run();
