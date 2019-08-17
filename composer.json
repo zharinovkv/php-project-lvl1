@@ -9,6 +9,7 @@
         "bin/brain-prime"
     ],
     "type": "library",
+    "version": "1.0.0",
     "authors": [
         {
           "name": "Konstantin Zharinov",
