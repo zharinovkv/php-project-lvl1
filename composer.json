@@ -1,13 +1,5 @@
 {
     "name": "zharinov/brain-games",
-    "bin":
-    [   "bin/brain-games",
-        "bin/brain-even",
-        "bin/brain-calc",
-        "bin/brain-gcd",
-        "bin/brain-progression",
-        "bin/brain-prime"
-    ],
     "type": "library",
     "version": "1.0.0",
     "authors": [
@@ -18,7 +10,14 @@
       ],
     "description": "php-project-lvl1",
     "license": "MIT",
-    "minimum-stability": "dev",
+    "bin":
+    [   "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
+    ],
     "scripts": {
         "phpcs": "phpcs"
     },
