@@ -10,6 +10,7 @@
       ],
     "description": "php-project-lvl1",
     "license": "MIT",
+    "minimum-stability": "stable",
     "bin":
     [   "bin/brain-games",
         "bin/brain-even",
