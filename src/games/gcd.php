@@ -7,12 +7,19 @@ use function BrainGames\Games\games;
 function run()
 {
     $gameRound = function () {
-        $rand1 = rand(1, 100);
-        $rand2 = rand(1, 100);
-        $question = "$rand1 и $rand2";
-        $result = gmp_gcd($rand1, $rand2);
+
+        $min = 1;
+        $max = 100;
+
+        $first = rand($min, $max);
+        $second = rand($min, $max);
+
+        $question = "$first и $second";
+        $result = gmp_gcd($first, $second);
+
         return ['question' => $question, 'result' => $result];
     };
+
     $mission = 'Find the greatest common divisor of given numbers.';
     games($mission, $gameRound);
 }

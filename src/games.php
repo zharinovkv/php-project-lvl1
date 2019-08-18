@@ -30,7 +30,7 @@ function games($mission, $gameRound)
 
 function getResult($questionAndResult)
 {
-    return $questionAndResult['result'];
+    return (string)$questionAndResult['result'];
 }
 
 function getQuestion($questionAndResult)

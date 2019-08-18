@@ -10,15 +10,18 @@ use function BrainGames\Games\games;
 function run()
 {
     $gameRound = function () {
-        $rand = rand();
-        $isEven = isEven($rand);
-        return ['question' => $rand, 'result' => $isEven];
+
+        $question = rand();
+        $result = isEven($question);
+        
+        return ['question' => $question, 'result' => $result];
     };
+    
     $mission = 'Answer "yes" if number even otherwise answer "no".';
     games($mission, $gameRound);
 }
 
-function isEven($rand)
+function isEven($question)
 {
-    return ($rand % 2 == 0) ? "yes" : "no";
+    return ($question % 2 == 0) ? "yes" : "no";
 }
