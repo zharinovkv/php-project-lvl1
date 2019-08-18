@@ -8,6 +8,7 @@
         }
       ],
     "description": "php-project-lvl1",
+    "keywords": ["PHP"],
     "license": "MIT",
     "minimum-stability": "dev",
     "bin":
