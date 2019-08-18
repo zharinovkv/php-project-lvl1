@@ -23,3 +23,5 @@ DEMO
 
 Игра: "Проверка на чётность"
 [![asciicast](https://asciinema.org/a/263022.svg)](https://asciinema.org/a/263022)
+
+
