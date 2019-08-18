@@ -14,7 +14,7 @@ function run()
         
         $progression = range($min, $max, $step);
 
-        $index = rand($min, $max / 2);
+        $index = rand($min, $max / $step);
         $result = $progression[$index];
 
         $progression[$index] = '..';
