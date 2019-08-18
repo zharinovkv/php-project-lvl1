@@ -7,9 +7,19 @@ Installation
 
 composer require zharinov/brain-games
 
-[![asciicast](https://asciinema.org/a/R00VLVBIrYTlMubG3zlzPJJBw.svg)](https://asciinema.org/a/R00VLVBIrYTlMubG3zlzPJJBw)
+DEMO
 
+Игра "Простое ли число?"
+[![asciicast](https://asciinema.org/a/263027.svg)](https://asciinema.org/a/263027)
 
-<p>This is some text.</p>
-<script src="https://asciinema.org/a/14.js" id="asciicast-14" async></script>
-<p>This is some other text.</p>
+Игра "Арифметическая прогрессия"
+[![asciicast](https://asciinema.org/a/263026.svg)](https://asciinema.org/a/263026)
+
+Игра "НОД"
+[![asciicast](https://asciinema.org/a/263025.svg)](https://asciinema.org/a/263025)
+
+Игра: "Калькулятор"
+[![asciicast](https://asciinema.org/a/263024.svg)](https://asciinema.org/a/263024)
+
+Игра: "Проверка на чётность"
+[![asciicast](https://asciinema.org/a/263022.svg)](https://asciinema.org/a/263022)
