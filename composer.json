@@ -8,7 +8,7 @@
         }
       ],
     "description": "php-project-lvl1",
-    "keywords": ["PHP"],
+    "keywords": ["PHP", "hexlet"],
     "license": "MIT",
     "minimum-stability": "dev",
     "bin":
