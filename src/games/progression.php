@@ -2,27 +2,27 @@
 
 namespace BrainGames\Progression;
 
-use function BrainGames\Games\games;
+use function BrainGames\Game\game;
+
+const MISSION = 'What number is missing in the progression?';
 
 function run()
 {
-    $gameRound = function () {
+    $play = function () {
 
-        $min = 0;
-        $max = 18;
+        $start = 0;
+        $end = 18;
         $step = 2;
         
-        $progression = range($min, $max, $step);
+        $progression = range($start, $end, $step);
+        $itenIndexForQuestion = rand($start, $end / $step);
 
-        $index = rand($min, $max / $step);
-        $result = $progression[$index];
-
-        $progression[$index] = '..';
+        $answerEngine = $progression[$itenIndexForQuestion];
+        $progression[$itenIndexForQuestion] = '..';
         $question = implode(" ", $progression);
         
-        return ['question' => $question, 'result' => $result];
+        return ['question' => $question, 'answerEngine' => $answerEngine];
     };
 
-    $mission = 'What number is missing in the progression?';
-    games($mission, $gameRound);
+    game(MISSION, $play);
 }

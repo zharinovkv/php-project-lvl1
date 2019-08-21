@@ -2,11 +2,13 @@
 
 namespace BrainGames\Gcd;
 
-use function BrainGames\Games\games;
+use function BrainGames\Game\game;
+
+const MISSION = 'Find the greatest common divisor of given numbers.';
 
 function run()
 {
-    $gameRound = function () {
+    $play = function () {
 
         $min = 1;
         $max = 100;
@@ -14,12 +16,26 @@ function run()
         $first = rand($min, $max);
         $second = rand($min, $max);
 
-        $question = "$first и $second";
-        $result = gmp_gcd($first, $second);
+        $question = "$first $second";
+        $answerEngine = gcd($first, $second);
 
-        return ['question' => $question, 'result' => $result];
+        return ['question' => $question, 'answerEngine' => $answerEngine];
     };
 
-    $mission = 'Find the greatest common divisor of given numbers.';
-    games($mission, $gameRound);
+    game(MISSION, $play);
+}
+
+function gcd($first, $second)
+{
+
+    if ($first < $second) {
+        [$first, $second] = [$second, $first];
+    }
+
+    if ($first % $second == 0) {
+        return $second;
+    } else {
+        $first =  $first % $second;
+        return gcd($first, $second);
+    }
 }

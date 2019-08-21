@@ -2,11 +2,13 @@
 
 namespace BrainGames\Calc;
 
-use function BrainGames\Games\games;
+use function BrainGames\Game\game;
+
+const MISSION = 'What is the result of the expression?';
 
 function run()
 {
-    $gameRound = function () {
+    $play = function () {
         
         $min = 0;
         $max = 9;
@@ -17,24 +19,25 @@ function run()
         $operators = ['+', '-', '*'];
         $operator = $operators[rand($min, count($operators) - 1)];
         
-        $result = 0;
+        $answerEngine = 0;
         $question = "$operand1 $operator $operand2";
 
         switch ($operator) {
             case '+':
-                $result = $operand1 + $operand2;
+                $answerEngine = $operand1 + $operand2;
                 break;
             case '-':
-                $result = $operand1 - $operand2;
+                $answerEngine = $operand1 - $operand2;
                 break;
             case '*':
-                $result = $operand1 * $operand2;
+                $answerEngine = $operand1 * $operand2;
                 break;
         }
 
-        return ['question' => $question, 'result' => $result];
+        //var_dump($question);
+
+        return ['question' => $question, 'answerEngine' => $answerEngine];
     };
 
-    $mission = 'What is the result of the expression?';
-    games($mission, $gameRound);
+    game(MISSION, $play);
 }

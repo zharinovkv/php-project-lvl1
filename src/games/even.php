@@ -5,23 +5,30 @@ namespace BrainGames\Even;
 use function \cli\line;
 use function \cli\prompt;
 
-use function BrainGames\Games\games;
+use function BrainGames\Game\game;
+
+const MISSION = 'Answer "yes" if number even otherwise answer "no".';
 
 function run()
 {
-    $gameRound = function () {
+    $play = function () {
 
         $question = rand();
-        $result = isEven($question);
+        $isEven = isEven($question);
+        $answerEngine = answerEngine($isEven);
         
-        return ['question' => $question, 'result' => $result];
+        return ['question' => $question, 'answerEngine' => $answerEngine];
     };
     
-    $mission = 'Answer "yes" if number even otherwise answer "no".';
-    games($mission, $gameRound);
+    game(MISSION, $play);
 }
 
 function isEven($question)
 {
-    return ($question % 2 == 0) ? "yes" : "no";
+    return ($question % 2 == 0) ? true : false;
+}
+
+function answerEngine($isEven)
+{
+    return $isEven == true ? "yes" : "no";
 }
