@@ -10,7 +10,6 @@
     "description": "php-project-lvl1",
     "keywords": ["PHP", "hexlet"],
     "license": "MIT",
-    "minimum-stability": "dev",
     "bin":
     [   "bin/brain-games",
         "bin/brain-even",
