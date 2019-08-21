@@ -5,7 +5,4 @@ php:
 install:
   - make install
 
-script: make lint 
-
-after_script:
-  - vendor/bin/test-reporter
+script: make lint
