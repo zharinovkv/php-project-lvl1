@@ -5,25 +5,25 @@ namespace BrainGames\Game;
 use function \cli\line;
 use function \cli\prompt;
 
-const NUMBER_OF_ROUNDS = 3;
+const ROUNDS_COUNT = 3;
 
-function game($mission, $play)
+function game($mission, $playRound)
 {
     line('Welcome to the Brain Game!' . PHP_EOL . $mission  . PHP_EOL);
     $name = prompt('May I have your name?');
     line("Hello, %s!" . PHP_EOL, $name);
 
-    for ($i = 1; $i <= NUMBER_OF_ROUNDS; $i++) {
-        ['question' => $question, 'answerEngine' => $answerEngine] = $play();
+    for ($i = 1; $i <= ROUNDS_COUNT; $i++) {
+        ['question' => $question, 'roundAnswer' => $roundAnswer] = $playRound();
         line("Question: %s", $question);
 
-        $answerGamer = prompt('Your answer');
+        $gamerAnswer = prompt('Your answer');
 
-        if ($answerEngine == $answerGamer) {
+        if ($roundAnswer == $gamerAnswer) {
             line("Correct!");
         } else {
             $i = 0;
-            line("'{$answerGamer}' is wrong answer ;(. Correct answer was '{$answerEngine}'." .
+            line("'{$gamerAnswer}' is wrong answer ;(. Correct answer was '{$roundAnswer}'." .
             PHP_EOL . "Let's try again, {$name}!");
         }
     }

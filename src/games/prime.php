@@ -8,31 +8,30 @@ const MISSION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function run()
 {
-    $play = function () {
+    $playRound = function () {
 
-        $min = 1;
-        $max = 100;
-
-        $question = rand($min, $max);
-        $answerEngine = isPrime($question, $i = 3);
+        $question = rand(1, 100);
+        $isPrime = isPrime($question, $i = 3);
+        $roundAnswer =  $isPrime == true ? "yes" : "no";
         
-        return ['question' => $question, 'answerEngine' => $answerEngine];
+        return ['question' => $question, 'roundAnswer' => $roundAnswer];
     };
 
-    game(MISSION, $play);
+    game(MISSION, $playRound);
 }
 
-function isPrime($number, $i)
+function isPrime($number)
 {
     if ($number < 2) {
-        return "no";
+        return false;
     } elseif ($number == 2) {
-        return "yes";
-    } elseif ($number % $i == 0) {
-        return "no";
-    } elseif ($i < $number / 2) {
-        return isPrime($number, $i + 1);
+        return true;
     } else {
-        return "yes";
+        for ($i = 2; $i <= sqrt($number); $i++) {
+            if ($number % $i == 0) {
+                return false;
+            }
+        }
     }
+    return true;
 }

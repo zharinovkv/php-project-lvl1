@@ -5,24 +5,25 @@ namespace BrainGames\Progression;
 use function BrainGames\Game\game;
 
 const MISSION = 'What number is missing in the progression?';
+const LONG = 10;
 
 function run()
 {
-    $play = function () {
+    $playRound = function () {
 
-        $start = 0;
-        $end = 18;
-        $step = 2;
-        
+        $start = rand(1, 100);
+        $step = rand(1, 5);
+        $end = $start + LONG * $step - $step;
+
         $progression = range($start, $end, $step);
-        $itenIndexForQuestion = rand($start, $end / $step);
+        $indexOfTheHiddenElement = rand(0, count($progression) - 1);
 
-        $answerEngine = $progression[$itenIndexForQuestion];
-        $progression[$itenIndexForQuestion] = '..';
+        $roundAnswer = $progression[$indexOfTheHiddenElement];
+        $progression[$indexOfTheHiddenElement] = '..';
         $question = implode(" ", $progression);
         
-        return ['question' => $question, 'answerEngine' => $answerEngine];
+        return ['question' => $question, 'roundAnswer' => $roundAnswer];
     };
 
-    game(MISSION, $play);
+    game(MISSION, $playRound);
 }

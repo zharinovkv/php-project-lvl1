@@ -8,24 +8,21 @@ const MISSION = 'Find the greatest common divisor of given numbers.';
 
 function run()
 {
-    $play = function () {
+    $playRound = function () {
 
-        $min = 1;
-        $max = 100;
-
-        $first = rand($min, $max);
-        $second = rand($min, $max);
+        $first = rand(1, 100);
+        $second = rand(1, 100);
 
         $question = "$first $second";
-        $answerEngine = gcd($first, $second);
+        $roundAnswer = getGcd($first, $second);
 
-        return ['question' => $question, 'answerEngine' => $answerEngine];
+        return ['question' => $question, 'roundAnswer' => $roundAnswer];
     };
 
-    game(MISSION, $play);
+    game(MISSION, $playRound);
 }
 
-function gcd($first, $second)
+function getGcd($first, $second)
 {
 
     if ($first < $second) {
@@ -36,6 +33,6 @@ function gcd($first, $second)
         return $second;
     } else {
         $first =  $first % $second;
-        return gcd($first, $second);
+        return getGcd($first, $second);
     }
 }
