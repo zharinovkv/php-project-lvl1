@@ -22,15 +22,19 @@ function run()
     game(MISSION, $getQuestionAndCorrectAnswer);
 }
 
-function getGcd($first, $second)
+function getGcd($firstNum, $secondNum)
 {
+    $first;
+    $second;
 
-    if ($first < $second) {
-        [$first, $second] = [$second, $first];
+    if ($firstNum < $secondNum) {
+        [$first, $second] = [$secondNum, $firstNum];
+    } else {
+        [$first, $second] = [$firstNum, $secondNum];
     }
 
     if ($first % $second == 0) {
-        return $second;
+            return $second;
     } else {
         $first =  $first % $second;
         return getGcd($first, $second);

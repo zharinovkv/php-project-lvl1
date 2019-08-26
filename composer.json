@@ -8,10 +8,13 @@
         }
       ],
     "description": "php-project-lvl1",
-    "keywords": ["PHP", "hexlet"],
+    "keywords": [
+        "PHP", 
+        "hexlet"
+    ],
     "license": "MIT",
-    "bin":
-    [   "bin/brain-even",
+    "bin": [
+        "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
         "bin/brain-progression",
@@ -28,12 +31,12 @@
     },
     "autoload": {
         "files": [
-            "src/game.php",
-            "src/games/calc.php",
-            "src/games/even.php",
-            "src/games/gcd.php",
-            "src/games/progression.php",
-            "src/games/prime.php"
+            "src/Game.php",
+            "src/Games/Calc.php",
+            "src/Games/Even.php",
+            "src/Games/Gcd.php",
+            "src/Games/Progression.php",
+            "src/Games/Prime.php"
         ]
     }
 }

@@ -10,8 +10,7 @@ function run()
 {
     $getQuestionAndCorrectAnswer = function () {
         $question = rand(1, 100);
-        $isPrime = isPrime($question, $i = 3);
-        $correctAnswer =  $isPrime == true ? "yes" : "no";        
+        $correctAnswer = (isPrime($question) == true) ? "yes" : "no";
         return [$question, $correctAnswer];
     };
 
@@ -22,11 +21,11 @@ function isPrime($number)
 {
     if ($number < 2) {
         return false;
-    } 
-    
+    }
+
     if ($number == 2) {
         return true;
-    } 
+    }
     
     if ($number > 2) {
         for ($i = 2; $i <= sqrt($number); $i++) {
@@ -35,5 +34,6 @@ function isPrime($number)
             }
         }
     }
+
     return true;
 }

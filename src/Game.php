@@ -22,7 +22,7 @@ function game($mission, $getQuestionAndCorrectAnswer)
         if ($correctAnswer == $gamerAnswer) {
             $i = $i + 1;
             line("Correct!");
-        } 
+        }
         
         if ($correctAnswer != $gamerAnswer) {
             $i = 1;
