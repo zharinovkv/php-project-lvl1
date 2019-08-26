@@ -7,23 +7,26 @@ use function \cli\prompt;
 
 const ROUNDS_COUNT = 3;
 
-function game($mission, $playRound)
+function game($mission, $getQuestionAndCorrectAnswer)
 {
     line('Welcome to the Brain Game!' . PHP_EOL . $mission  . PHP_EOL);
     $name = prompt('May I have your name?');
     line("Hello, %s!" . PHP_EOL, $name);
 
-    for ($i = 1; $i <= ROUNDS_COUNT; $i++) {
-        ['question' => $question, 'roundAnswer' => $roundAnswer] = $playRound();
+    for ($i = 1; $i <= ROUNDS_COUNT;) {
+        [$question, $correctAnswer] = $getQuestionAndCorrectAnswer();
         line("Question: %s", $question);
 
         $gamerAnswer = prompt('Your answer');
 
-        if ($roundAnswer == $gamerAnswer) {
+        if ($correctAnswer == $gamerAnswer) {
+            $i = $i + 1;
             line("Correct!");
-        } else {
-            $i = 0;
-            line("'{$gamerAnswer}' is wrong answer ;(. Correct answer was '{$roundAnswer}'." .
+        } 
+        
+        if ($correctAnswer != $gamerAnswer) {
+            $i = 1;
+            line("'{$gamerAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'." .
             PHP_EOL . "Let's try again, {$name}!");
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Calc;
+namespace BrainGames\Games\Calc;
 
 use function BrainGames\Game\game;
 
@@ -9,28 +9,28 @@ const OPERATORS = ['+', '-', '*'];
 
 function run()
 {
-    $playRound = function () {
+    $getQuestionAndCorrectAnswer = function () {
         
         $operand1 = rand(0, 9);
         $operand2 = rand(0, 9);
         $operator = OPERATORS[rand(0, count(OPERATORS) - 1)];
 
         $question = "$operand1 $operator $operand2";
-        $roundAnswer;
+        $correctAnswer;
 
         switch ($operator) {
             case '+':
-                $roundAnswer = $operand1 + $operand2;
+                $correctAnswer = $operand1 + $operand2;
                 break;
             case '-':
-                $roundAnswer = $operand1 - $operand2;
+                $correctAnswer = $operand1 - $operand2;
                 break;
             case '*':
-                $roundAnswer = $operand1 * $operand2;
+                $correctAnswer = $operand1 * $operand2;
                 break;
         }
 
-        return ['question' => $question, 'roundAnswer' => $roundAnswer];
+        return [$question, $getQuestionAndCorrectAnswer];
     };
 
     game(MISSION, $playRound);
