@@ -14,20 +14,20 @@ DEMO
 
 Игра: "Проверка на чётность"
 
-[![asciicast](https://asciinema.org/a/263071.svg)](https://asciinema.org/a/263071)
+[![asciicast](https://asciinema.org/a/264860.svg)](https://asciinema.org/a/264860)
 
 Игра: "Калькулятор"
 
-[![asciicast](https://asciinema.org/a/263073.svg)](https://asciinema.org/a/263073)
+[![asciicast](https://asciinema.org/a/264861.svg)](https://asciinema.org/a/264861)
 
 Игра "НОД"
 
-[![asciicast](https://asciinema.org/a/263074.svg)](https://asciinema.org/a/263074)
+[![asciicast](https://asciinema.org/a/264862.svg)](https://asciinema.org/a/264862)
 
 Игра "Арифметическая прогрессия"
 
-[![asciicast](https://asciinema.org/a/263076.svg)](https://asciinema.org/a/263076)
+[![asciicast](https://asciinema.org/a/264864.svg)](https://asciinema.org/a/264864)
 
 Игра "Простое ли число?"
 
-[![asciicast](https://asciinema.org/a/263077.svg)](https://asciinema.org/a/263077)
+[![asciicast](https://asciinema.org/a/264866.svg)](https://asciinema.org/a/264866)
