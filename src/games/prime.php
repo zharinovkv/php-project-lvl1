@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Games\Prime;
+namespace BrainGames\games\prime;
 
-use function BrainGames\Game\game;
+use function BrainGames\game\game;
 
 const MISSION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -10,7 +10,7 @@ function run()
 {
     $getQuestionAndCorrectAnswer = function () {
         $question = rand(1, 100);
-        $correctAnswer = (isPrime($question) == true) ? "yes" : "no";
+        $correctAnswer = isPrime($question) == true ? "yes" : "no";
         return [$question, $correctAnswer];
     };
 

@@ -1,5 +1,5 @@
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7d51e20bdcb19f47c069/maintainability)](https://codeclimate.com/github/zharinovkv/php-project-lvl1/maintainability)
 
 [![Build Status](https://travis-ci.org/zharinovkv/php-project-lvl1.svg?branch=master)](https://travis-ci.org/zharinovkv/php-project-lvl1)
 

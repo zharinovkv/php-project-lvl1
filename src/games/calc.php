@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Games\Calc;
+namespace BrainGames\games\calc;
 
-use function BrainGames\Game\game;
+use function BrainGames\game\game;
 
 const MISSION = 'What is the result of the expression?';
 const OPERATORS = ['+', '-', '*'];
@@ -30,8 +30,8 @@ function run()
                 break;
         }
 
-        return [$question, $getQuestionAndCorrectAnswer];
+        return [$question, $correctAnswer];
     };
 
-    game(MISSION, $playRound);
+    game(MISSION, $getQuestionAndCorrectAnswer);
 }

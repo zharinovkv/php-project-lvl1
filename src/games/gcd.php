@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Games\Gcd;
+namespace BrainGames\games\gcd;
 
-use function BrainGames\Game\game;
+use function BrainGames\game\game;
 
 const MISSION = 'Find the greatest common divisor of given numbers.';
 
@@ -34,7 +34,7 @@ function getGcd($firstNum, $secondNum)
     }
 
     if ($first % $second == 0) {
-            return $second;
+        return $second;
     } else {
         $first =  $first % $second;
         return getGcd($first, $second);

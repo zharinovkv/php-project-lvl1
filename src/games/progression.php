@@ -1,22 +1,22 @@
 <?php
 
-namespace BrainGames\Games\Progression;
+namespace BrainGames\games\progression;
 
-use function BrainGames\Game\game;
+use function BrainGames\game\game;
 
 const MISSION = 'What number is missing in the progression?';
-const LENTH = 10;
+const LENGTH = 10;
 
 function run()
 {
     $getQuestionAndCorrectAnswer = function () {
 
-        $start = rand(0, LENTH * 10);
-        $step = rand(1, LENTH);
-        $end = $start + (LENTH - 1) * $step;
+        $start = rand(0, 100);
+        $step = rand(1, 10);
+        $end = $start + (LENGTH - 1) * $step;
 
         $progression = range($start, $end, $step);
-        $hiddenElementIndex = rand(0, LENTH - 1);
+        $hiddenElementIndex = rand(0, LENGTH - 1);
 
         $correctAnswer = $progression[$hiddenElementIndex];
         $progression[$hiddenElementIndex] = '..';
