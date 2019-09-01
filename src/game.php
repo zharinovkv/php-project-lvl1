@@ -19,15 +19,12 @@ function game($mission, $getQuestionAndCorrectAnswer)
 
         $gamerAnswer = prompt('Your answer');
 
-        if ($correctAnswer == $gamerAnswer) {
-            line("Correct!");
-            if ($i == 3) {
-                line("Congratulations, {$name}!");
-            }
-        } else {
-            line("'{$gamerAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'." .
-            PHP_EOL . "Let's try again, {$name}!");
-            break;
+        if ($correctAnswer != $gamerAnswer) {
+            line("'{$gamerAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'." . PHP_EOL .
+            "Let's try again, {$name}!");
+            return;
         }
+        line("Correct!");
     }
+    line("Congratulations, {$name}!");
 }

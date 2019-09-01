@@ -10,7 +10,7 @@ function run()
 {
     $getQuestionAndCorrectAnswer = function () {
         $question = rand();
-        $correctAnswer = isEven($question) == true ? "yes" : "no";
+        $correctAnswer = isEven($question) ? "yes" : "no";
         return [$question, $correctAnswer];
     };
     
